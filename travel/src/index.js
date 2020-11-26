@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Api from './Api/Api'
+//import Api from './Api/Api'
 
 ReactDOM.render(
   
   <div>
-    <Api />
+    <App />
   </div>,
   document.getElementById('root')
 );
