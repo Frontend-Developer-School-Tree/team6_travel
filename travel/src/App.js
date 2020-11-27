@@ -1,5 +1,4 @@
 import './App.css';
-
 import Header from './Header/Header';
 import ProviderApi from './Api/ContextApi';
 
