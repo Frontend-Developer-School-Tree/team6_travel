@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+//import ReactDom from "react-dom";
+import {MapContainer,TileLayer, Marker, Popup} from 'react-leaflet'
+
 /** 
  * Questa component riceve le props dal padre Cards
  * e le stampa a prescindere da ciò viene passato
@@ -105,13 +108,34 @@ function Card(props) {
         )
     }
 
+    /********** funzione Map **************/
+    function mappa(){
+        return(
+        <div className="card">
+        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+            <TileLayer
+             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[51.505, -0.09]}>
+                <Popup>
+                 A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+        </MapContainer>
+        </div>
+        )
+    }
+
     function renderSwitchCard() {
         switch(numCard) {
           case 1:
             return contattiCard();
           case 2:
-            return tariffaCard();
+            return mappa();
           case 3:
+            return tariffaCard();
+          case 4:
             return documentiCard();
         }
       }

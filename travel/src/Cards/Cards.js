@@ -76,6 +76,7 @@ function Cards() {
         <div>
             {/**card contatti */}
             <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/>
+            <Card num={addNumCard()}/> 
             <Card value={tariffa} num={addNumCard()}/> 
             <Card value={documents} num={addNumCard()}/>
 
