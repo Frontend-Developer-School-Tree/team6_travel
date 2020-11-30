@@ -1,6 +1,10 @@
 body {
     background-color: teal;
 }
+.containerLogin{
+    display:flex;
+    justify-content:center;
+}
 .formContainer {
     display: flex;
     text-align: center;
@@ -17,4 +21,6 @@ body {
 
 .formContainer #formBody {
     margin-top: 12.5vh;
+    justify-content: center
+    
 }

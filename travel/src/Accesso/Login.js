@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
 import './accesso.css';
+import Routing from './Routing'
+import App from '../App'
 
 const initialState = {
     username : '',
     usernameError: '',
     password : '',
-    passwordError: ''
+    passwordError: '',
+    datiNonCorretti:'',
+    datiCorretti:false
 }
 
 class Login extends Component {
-
     constructor(props){
         super(props)
-        this.state = initialState
+        this.state = initialState;
+        this.handleChange=this.handleChange.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this);
+        
     }
+    userAdmin={user:'team6',psw:'123456'}
 
     handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({
-            [name]: value
+            [name]: value,
         })
     }
-    handleSubmit(event) {
-        const isValid = this.validate();
-        event.preventDefault();
-        if(isValid)
-        { this.setState(initialState) }
-    }
+    
+    //verifica che i campi non siano vuoti
     validate() {
         let usernameError = '';
         let passwordError = '';
@@ -47,8 +50,70 @@ class Login extends Component {
         return true;
     }
     
+    handleSubmit=(event) => {
+        const isValid = this.validate();
+        const correctDati=this.controlloLogin();
+        event.preventDefault();
+       // console.log("state",this.state)
+        if(isValid){
+            this.setState(initialState)
+        }
+        if(correctDati){
+            this.setState({datiCorretti:true})
+        }
+        //console.log("bool",correctDati)
+    }
+
+    controlloLogin(){
+        let usernameError = '';
+        let passwordError = '';
+        let datiNonCorretti='';
+
+        if((this.userAdmin.user===this.state.username) &&(this.userAdmin.psw===this.state.password) ){
+            console.log("accesso eseguito")
+            this.setState({datiCorretti:true})
+            return true;
+        }
+        if((this.userAdmin.user!==this.state.username)&&(this.userAdmin.psw===this.state.password) ){
+            console.log("non funge")
+            usernameError = 'Username non corretta'
+            this.setState({
+                username:'',
+                password:'',
+                usernameError,
+
+            })
+            return false;
+        }
+        if((this.userAdmin.user===this.state.username)&&(this.userAdmin.psw!==this.state.password) ){
+            console.log("non funge")
+            passwordError = 'Password non corretta'
+            this.setState({
+                username:'',
+                password:'',
+                passwordError,
+
+            })
+            return false;
+        }
+        else{
+            datiNonCorretti='dati inseriti non corretti'
+            this.setState({
+                username:'',
+                password:'',
+                datiNonCorretti,
+            })
+            return false
+        }
+    }
+    
     render() {
         return (
+             
+    (this.state.datiCorretti)?
+                <> 
+                    <Routing /> 
+               </>:
             <div className="containerLogin">
                 <div className="formContainer">
                     <form id="formBody" onSubmit={this.handleSubmit} noValidate>
@@ -71,10 +136,16 @@ class Login extends Component {
                                 onChange={this.handleChange}
                             />
                         </div>
+                         {this.state.usernameError && <small style={{color:'red'}}>{this.state.usernameError}</small>}
+                         {this.state.passwordError && <small style={{color:'red'}}>{this.state.passwordError}</small>}
+                         {this.state.datiNonCorretti && <small style={{color:'red'}}>{this.state.datiNonCorretti}</small>}
+                         <div>
                         <button type="submit" className="btn btn-primary" style={{marginTop:20}}>ACCEDI</button>
+                        </div>
                     </form>
                 </div>
             </div>
+           
         )
     }
 }
