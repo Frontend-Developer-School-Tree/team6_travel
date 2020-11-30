@@ -1,0 +1,20 @@
+body {
+    background-color: teal;
+}
+.formContainer {
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: space-around;
+    height: 50vh;
+    width: 30vw;
+    margin-top: 12.5vh;
+    border: 5px solid;
+
+    color: black;
+    background-color: white;
+}
+
+.formContainer #formBody {
+    margin-top: 12.5vh;
+}

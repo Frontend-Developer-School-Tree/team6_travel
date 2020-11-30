@@ -1,0 +1,8 @@
+.footer{
+    background-color:grey;
+    color:white;
+    text-align: left;
+ }
+ .footer p{
+    margin: 10px;
+ }
