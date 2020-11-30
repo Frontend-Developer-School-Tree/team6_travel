@@ -6,8 +6,8 @@ import App from './App'
 ReactDOM.render(
   
   <div>
-    <Login />
-    {/* <App /> */}
+    {/* <Login /> */}
+    <App />
   </div>,
   document.getElementById('root')
 );
