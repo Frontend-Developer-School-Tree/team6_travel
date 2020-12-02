@@ -32,82 +32,45 @@ function Card(props) {
                     }}>
                         <div className="card-body">
                             <div className="col">
-                                {Object.entries(data).map(val=>{
-                                // name: Carlo [name,Carlo]
-                                //image : http-- [image., http]
-                                //{console.log("entries",val)}
+                                <div className="row">
+                                    <div className="col-6">
+                                        {Object.entries(data).map(val=>{
+                                        // name: Carlo [name,Carlo]
+                                        //image : http-- [image., http]
+                                        //{console.log("entries",val)}
+                                            return(
+                                                (val[1].substring(0,4)=="http") ?
+                                                        <img id="imageCard" key={val[0]} src={val[1]} className="card-img-top"/>
+                                                        : " "
+                                            )
+                                        })}
+                                    </div>
+                                    <div className="col-6">
+                                        {Object.entries(data).map(val=>{
+                                            return(
+                                                (val[1].substring(0,4)!="http") ?
+                                                            <p id={val[0]} key={val[0]}>{val[1]}</p>
+                                                        : " "
+                                            )
+                                        })}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div className="col">
+                                <img id="logoAgency"src={logo.image}/>
+                                {info.map((val,index)=>{
                                     return(
-                                        (val[1].substring(0,4)=="http") ?
-                                        <div className="row">
-                                            <div className="col">
-                                                <img id="imageCard" key={val[0]} src={val[1]} className="card-img-top"/>
-                                            </div>
-                                        </div>
-                                            :
-                                        <div className="row">
-                                            <div className="col">
-                                                <p className="card-text" key={val[0]}>{val[1]}</p>
-                                            </div>
-                                        </div>
-                                                
+                                        <p key={index}>{val}</p>
                                     )
                                 })}
                             </div>
-                            <img id="logoAgency"src={logo.image}/>
-                            {info.map((val,index)=>{
-                                return(
-                                    <p key={index}>{val}</p>
-                                )
-                            })}
                         </div>
                     </div>
                 </div>
             </div>
         )
     }
-
-//             <div className="card-body">
-//                 <div className="col">
-//                     {Object.entries(data).map((val) => {
-//                     // name: Carlo [name,Carlo]
-//                     //image : http-- [image., http]
-//                     //{console.log("entries",val)}
-//                         return( 
-//                             val[1].substring(0, 4) == "http" ? (
-//                                 <div className="row">
-//                                     <div className="col">
-//                                         <img
-//                                             id="imageCard"
-//                                             key={val[0]}
-//                                             src={val[1]}
-//                                             className="card-img-top"
-//                                         />
-//                                     </div>
-//                                     ) : (
-//                                     <div className="col">
-//                                         <p className="card-text" key={val[0]}>
-//                                             {val[1]}
-//                                         </p>
-//                                     </div>
-//                                     )
-//                                 </div>
-//                         )
-//                     }
-//                     )
-//                 }
-//                 </div>
-//               <div className="col">
-//                 <img id="logoAgency" src={logo.image} />
-//                 {info.map((val, index) => {
-//                     return <p key={index}>{val}</p>;
-//                 })}
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
     /////////////////////////////////////////////////////
 
 
@@ -119,39 +82,56 @@ function Card(props) {
             tot+=price
         }
         return(
-            <div className="card">
-        {/**map dei type:adulto e adolescente */}
-        {Object.entries(data.type).map((val)=>{
-            //val[0] perchè è la key di ogni riga dell'object
-            {console.log("tariffa",val[1])}
-            return(
-                <div>
-                        <p key={val[0]}>{val[1]}</p>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="card" style={{
+                            width: '100vw',
+                        }}>
+                        <div className="card-body">
+                            <div className="col tipologia">
+                                {/**map dei type:adulto e adolescente */}
+                                {Object.entries(data.type).map((val)=>{
+                                    //val[0] perchè è la key di ogni riga dell'object
+                                    {console.log("tariffa",val[1])}
+                                    return(
+                                        <div>
+                                                <p key={val[0]}>{val[1]}</p>
+                                            </div>
+                                        )})}
+                            </div>
+                            <div className="col prezzi">
+                                {/**map dei prezzi */}
+                                {Object.entries(data.prezzi).map((val)=>{
+                                    //val[0] perchè è la key di ogni riga dell'object
+                                    {console.log("tariffa",val[1])}
+                                    return(
+                                        <div>
+                                            {totale(val[1])}
+                                            <p key={val[0]}>{val[1]}</p>
+                                        </div>
+                                        )})}
+                            </div>
+                        </div>
+                        <div className="card-body">
+                            <div className="row">
+                                <div className="col">
+                                    <div className="PrezzoTotale">
+                                        <p id="textTotale">Totale: </p>
+                                        <p id="totale">{tot}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                )})}
-        {/**map dei prezzi */}
-        {Object.entries(data.prezzi).map((val)=>{
-            //val[0] perchè è la key di ogni riga dell'object
-            {console.log("tariffa",val[1])}
-            return(
-                
-                <div>
-                    {totale(val[1])}
-                    <p key={val[0]}>{val[1]}</p>
                 </div>
-                )})}
-                <div className="PrezzoTotale">
-                    <p>Totale: </p>
-                    <p>{tot}</p>
-                </div>
-                <div className="Comprende"> 
-                    <p>{data.strComprende}</p>
-                    <p>{data.included}</p>
-                </div>
-                <div className="NonComprende"> 
-                    <p>{data.strNonComprende}</p>
-                    <p>{data.notIncluded}</p>
-                </div>
+                        <div className="Comprende"> 
+                            <p>{data.strComprende}</p>
+                            <p>{data.included}</p>
+                        </div>
+                        <div className="NonComprende"> 
+                            <p>{data.strNonComprende}</p>
+                            <p>{data.notIncluded}</p>
+                        </div>
            </div>
         )
     }

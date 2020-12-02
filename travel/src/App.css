@@ -1,4 +1,4 @@
-.container-fluid{
+.container-fluid {
   /* position: relative;
   z-index: 1; */
   height: 100vh;
@@ -7,18 +7,18 @@
   background-size: cover;
 }
 
-#logoAgency{
+#logoAgency {
   width: 6rem;
   /* position: absolute;
   z-index: 3; */
   /* margin: 3rem; */
 }
 
-#imageCard{
+#imageCard {
   width: 14rem;
 }
 
-#titleHeader{
+#titleHeader {
   font-size: 1.5rem;
   /* position: absolute;
   z-index: 3; */
@@ -27,18 +27,18 @@
   color: white;
 }
 
-.btn-primary{
+.btn-primary {
   /* position: absolute; */
   /* right: 8rem; */
   /* top: 22.5rem; */
   padding: 0.2rem 0.4rem;
   font-size: 0.8rem;
 }
-.row{
-display: flex;
-flex-wrap: wrap;
-margin-right: -15px;
-margin-left: -15px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .card-body {
@@ -66,17 +66,44 @@ margin-left: -15px;
   border-radius: .25rem;
 } */
 
-
-.card-body{
+.card-body {
   display: flex;
   flex-direction: row;
 }
 
-.card{
+.card {
   margin: 2rem auto;
 }
 
-.card p{
-  font-size: .7rem;
+.card p {
+  font-size: 0.6rem;
   margin: 0;
+}
+
+.card-body #name {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.card-body #frase, #phone, #email{
+  font-size: .6rem;
+}
+
+#imageCard {
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+}
+
+.tipologia p, .prezzi p, #textTotale{
+  font-size: .8rem;
+  color: silver;
+}
+
+.prezzi p, #textTotale{
+  text-align: end;
+}
+
+#textTotale{
+  font-weight: bold;
 }

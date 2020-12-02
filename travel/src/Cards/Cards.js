@@ -24,7 +24,7 @@ function Cards() {
     ///////////////////////////////////////////////////////////
     
     /* state Contatti */
-    const [contatti,setContatti]=useState({name,frase,image,phone,email});  
+    const [contatti,setContatti]=useState({image,name,frase,phone,email});  
     const [logo,setLogo]=useState({image:dati.agency.image})
     /******************** */
     
