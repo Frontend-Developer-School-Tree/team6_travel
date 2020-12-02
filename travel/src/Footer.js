@@ -4,7 +4,7 @@ import "./footer.css";
 class Footer extends Component {
     render() {
         return (
-         <div className = "container-fluid footer">
+         <div className="footer" >
             <div className = "row">
                <div className = "col mr-auto">
                   <p>Insolita Travels | Sicily DMC & Travel Agency (Licence nr. 2226/S2-Tur)</p>

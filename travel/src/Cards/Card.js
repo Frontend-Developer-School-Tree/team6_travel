@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //import ReactDom from "react-dom";
 import {MapContainer,TileLayer, Marker, Popup} from 'react-leaflet'
-
+import 'leaflet/dist/leaflet.css'
 /** 
  * Questa component riceve le props dal padre Cards
  * e le stampa a prescindere da ciò viene passato
@@ -28,6 +28,7 @@ function Card(props) {
             <div className="card">
         {Object.entries(data).map(val=>{
             // name: Carlo [name,Carlo]
+            //image : http-- [image., http]
                 //{console.log("entries",val)}
             return(
                 (val[1].substring(0,4)=="http") ?
@@ -112,7 +113,7 @@ function Card(props) {
     function mappa(){
         return(
         <div className="card">
-        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer style={{width:500, height:500}}center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
             <TileLayer
              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

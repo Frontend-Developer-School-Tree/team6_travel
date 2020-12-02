@@ -75,10 +75,10 @@ function Cards() {
     return (
         <div>
             {/**card contatti */}
-            <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/>
-            <Card num={addNumCard()}/> 
-            <Card value={tariffa} num={addNumCard()}/> 
-            <Card value={documents} num={addNumCard()}/>
+            <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/> {/** card contatti */}
+            <Card num={addNumCard()}/> {/** card mappa */}
+            <Card value={tariffa} num={addNumCard()}/> {/** Card tariffa */}
+            <Card value={documents} num={addNumCard()}/> {/**card Documents */}
 
         </div>
     )

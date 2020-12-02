@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './accesso.css';
 import Routing from './Routing'
-import App from '../App'
+import LoginForm from './LoginForm'
 
 const initialState = {
     username : '',
@@ -22,6 +22,7 @@ class Login extends Component {
     }
     userAdmin={user:'team6',psw:'123456'}
 
+    //prende tutto ciò che digitiamo nella form
     handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -50,20 +51,7 @@ class Login extends Component {
         return true;
     }
     
-    handleSubmit=(event) => {
-        const isValid = this.validate();
-        const correctDati=this.controlloLogin();
-        event.preventDefault();
-       // console.log("state",this.state)
-        if(isValid){
-            this.setState(initialState)
-        }
-        if(correctDati){
-            this.setState({datiCorretti:true})
-        }
-        //console.log("bool",correctDati)
-    }
-
+    // controllo dati inseriti
     controlloLogin(){
         let usernameError = '';
         let passwordError = '';
@@ -75,7 +63,6 @@ class Login extends Component {
             return true;
         }
         if((this.userAdmin.user!==this.state.username)&&(this.userAdmin.psw===this.state.password) ){
-            console.log("non funge")
             usernameError = 'Username non corretta'
             this.setState({
                 username:'',
@@ -89,7 +76,6 @@ class Login extends Component {
             console.log("non funge")
             passwordError = 'Password non corretta'
             this.setState({
-                username:'',
                 password:'',
                 passwordError,
 
@@ -106,6 +92,21 @@ class Login extends Component {
             return false
         }
     }
+    //invia i dati inseriti
+    handleSubmit=(event) => {
+        const isValid = this.validate();
+        const correctDati=this.controlloLogin();
+        event.preventDefault();
+       // console.log("state",this.state)
+        if(isValid){
+            this.setState(initialState)
+        }
+        if(correctDati){
+            this.setState({datiCorretti:true})
+        }
+        //console.log("bool",correctDati)
+    }
+
     
     render() {
         return (
@@ -114,6 +115,7 @@ class Login extends Component {
                 <> 
                     <Routing /> 
                </>:
+                    // <LoginForm state={this.initialState} handleChange={this.handleChange()} handleSubmit={this.handleSubmit()}  />
             <div className="containerLogin">
                 <div className="formContainer">
                     <form id="formBody" onSubmit={this.handleSubmit} noValidate>

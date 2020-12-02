@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 ReactDOM.render(
   
   <div>
-     <Router>
+         <Router>
                 <Redirect to="/login" />
                 <Route exact path = "/login">
                   <Login />
