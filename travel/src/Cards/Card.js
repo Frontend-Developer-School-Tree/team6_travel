@@ -25,30 +25,89 @@ function Card(props) {
         const info=props.info
         //////////////////////
         return(
-            <div className="card">
-        {Object.entries(data).map(val=>{
-            // name: Carlo [name,Carlo]
-            //image : http-- [image., http]
-                //{console.log("entries",val)}
-            return(
-                (val[1].substring(0,4)=="http") ?
-                <div>
-                    <img id="imageCard" key={val[0]} src={val[1]}/>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="card" style={{
+                        width: '100vw',
+                    }}>
+                        <div className="card-body">
+                            <div className="col">
+                                {Object.entries(data).map(val=>{
+                                // name: Carlo [name,Carlo]
+                                //image : http-- [image., http]
+                                //{console.log("entries",val)}
+                                    return(
+                                        (val[1].substring(0,4)=="http") ?
+                                        <div className="row">
+                                            <div className="col">
+                                                <img id="imageCard" key={val[0]} src={val[1]} className="card-img-top"/>
+                                            </div>
+                                        </div>
+                                            :
+                                        <div className="row">
+                                            <div className="col">
+                                                <p className="card-text" key={val[0]}>{val[1]}</p>
+                                            </div>
+                                        </div>
+                                                
+                                    )
+                                })}
+                            </div>
+                            <img id="logoAgency"src={logo.image}/>
+                            {info.map((val,index)=>{
+                                return(
+                                    <p key={index}>{val}</p>
+                                )
+                            })}
+                        </div>
+                    </div>
                 </div>
-                :
-                <div className="">
-                    <p key={val[0]}>{val[1]}</p>
-                </div>
-                )})}
-                <img id="logoAgency"src={logo.image}/>
-                {info.map((val,index)=>{
-                    return(
-                    <p key={index}>{val}</p>
-                    )
-                })}
-           </div>
+            </div>
         )
     }
+
+//             <div className="card-body">
+//                 <div className="col">
+//                     {Object.entries(data).map((val) => {
+//                     // name: Carlo [name,Carlo]
+//                     //image : http-- [image., http]
+//                     //{console.log("entries",val)}
+//                         return( 
+//                             val[1].substring(0, 4) == "http" ? (
+//                                 <div className="row">
+//                                     <div className="col">
+//                                         <img
+//                                             id="imageCard"
+//                                             key={val[0]}
+//                                             src={val[1]}
+//                                             className="card-img-top"
+//                                         />
+//                                     </div>
+//                                     ) : (
+//                                     <div className="col">
+//                                         <p className="card-text" key={val[0]}>
+//                                             {val[1]}
+//                                         </p>
+//                                     </div>
+//                                     )
+//                                 </div>
+//                         )
+//                     }
+//                     )
+//                 }
+//                 </div>
+//               <div className="col">
+//                 <img id="logoAgency" src={logo.image} />
+//                 {info.map((val, index) => {
+//                     return <p key={index}>{val}</p>;
+//                 })}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     )
+//   }
     /////////////////////////////////////////////////////
 
 
@@ -143,10 +202,10 @@ function Card(props) {
 
     //render 
     return (
-            <div className="card">    
+            <>    
                 {renderSwitchCard()}
                 
-            </div>
+            </>
     )
 }
 export default Card

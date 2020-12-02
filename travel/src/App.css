@@ -47,7 +47,7 @@ margin-left: -15px;
   min-height: 1px;
   padding: 1.25rem;
 }
-
+/* 
 .card {
   position: relative;
   display: -webkit-box;
@@ -64,4 +64,19 @@ margin-left: -15px;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
+} */
+
+
+.card-body{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  margin: 2rem auto;
+}
+
+.card p{
+  font-size: .7rem;
+  margin: 0;
 }

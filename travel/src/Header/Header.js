@@ -19,7 +19,7 @@ function Header() {
             <h1 id="titleHeader" className="float-right">{dati.title}</h1>
             <p id="button">
                 <button type="button" className="btn btn-primary float-right">
-                scopri di più
+                  scopri di più
                 </button>
             </p>
           </div>
