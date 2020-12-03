@@ -1,6 +1,11 @@
 import React, { useContext,useState } from "react";
 import { ContextApi } from "../Api/ContextApi";
-import Card from './Card'
+
+import ContattiCard from "./ComponentCards/ContattiCard"
+import DocumentiCard from "./ComponentCards/DocumentiCard";
+import MapCard from './ComponentCards/MapCard'
+import TappaCard from "./ComponentCards/TappaCard";
+import TariffeCard from "./ComponentCards/TariffeCard";
 
 
 
@@ -65,7 +70,23 @@ function Cards() {
     const titoloTappa="SIRACUSA"
     const dataTappa= "20 - 21 NOVEMBRE"
     const [siracusa, setSiracusa] = useState({titoloTappa, dataTappa})
+    
     /********** CARD MAP ******/
+    const coordsMarker=[]
+    const arrCitta=[]
+
+    const mergeCoordMap=dati.rows.map(val =>{
+        return arrCitta.push(val.places[0].name) ,coordsMarker.push(val.places[0].position.coords) 
+    })
+    const search = arrCitta.filter((x, index) =>{
+        return arrCitta.indexOf(x) === index;
+      })
+    const dateTo=dati.dateTo
+    const dateFrom=dati.dateFrom
+    const title=dati.title
+
+    const [mappa,setMappa]=useState({coordsMarker,arrCitta,dateTo,dateFrom,title,search})
+    ///////////////////////////////////////
     
 
     /***********DETERMINA LO SWITCH RENDER IN CARD********* */
@@ -79,11 +100,11 @@ function Cards() {
     return (
         <div>
             {/**card contatti */}
-            <Card num={addNumCard()}/> {/** card mappa */}
-            <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/> {/** card contatti */}
-            <Card value={siracusa} num={addNumCard()}/>{/* Card tappa */}
-            <Card value={tariffa} num={addNumCard()}/> {/** Card tariffa */}
-            <Card value={documents} num={addNumCard()}/> {/**card Documents */}
+            <MapCard value={mappa} /> 
+            <ContattiCard value={contatti}  logo={logo} info={informations}/> 
+            {/* <TappaCard value={siracusa} /> */}
+            <TariffeCard value={tariffa} /> {/** Card tariffa */}
+            <DocumentiCard value={documents}/> {/**card Documents */}
 
         </div>
     )

@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Header/Header";
 import ProviderApi from "./Api/ContextApi";
-import Cards from "./Cards/Cards";
+import CardLogic from "./Cards/CardLogic";
 import Footer from "./Footer";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Header />
         <div className="container-fluid">
-          <Cards />
+          <CardLogic />
           <Footer />
         </div>
       </div>
