@@ -49,8 +49,6 @@ function TariffeCard(props) {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
                         <div className="Comprende"> 
                             <p>{data.strComprende}</p>
                             <p>{data.included}</p>
@@ -59,6 +57,8 @@ function TariffeCard(props) {
                             <p>{data.strNonComprende}</p>
                             <p>{data.notIncluded}</p>
                         </div>
+                    </div>
+                </div>
            </div>
         )
     

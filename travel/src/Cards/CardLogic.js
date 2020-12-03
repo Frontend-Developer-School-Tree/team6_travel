@@ -102,7 +102,7 @@ function Cards() {
             {/**card contatti */}
             <MapCard value={mappa} /> 
             <ContattiCard value={contatti}  logo={logo} info={informations}/> 
-            {/* <TappaCard value={siracusa} /> */}
+            <TappaCard value={siracusa} />
             <TariffeCard value={tariffa} /> {/** Card tariffa */}
             <DocumentiCard value={documents}/> {/**card Documents */}
 
