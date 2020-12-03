@@ -13,12 +13,12 @@ function Header() {
         <div className="row">
           <div className="col">
             {/* {console.log("ture:", dati)} */}
-            <img id="logoAgency" src={dati.agency.image}></img>
+            <img id="logoHeader" src={dati.agency.image}></img>
           </div>
-          <div className="col align-items-end">
-            <h1 id="titleHeader" className="float-right">{dati.title}</h1>
+          <div className="col text-right flex-end">
+            <h1 id="titleHeader">{dati.title}</h1>
             <p id="button">
-                <button type="button" className="btn btn-primary float-right">
+                <button type="button" className="btn btn-primary">
                   scopri di più
                 </button>
             </p>

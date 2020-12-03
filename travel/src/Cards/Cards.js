@@ -61,6 +61,10 @@ function Cards() {
     console.log(documents)
     //////////////////////////////////////
 
+    //state tappaCarda (siracusa)
+    const titoloTappa="SIRACUSA"
+    const dataTappa= "20 - 21 NOVEMBRE"
+    const [siracusa, setSiracusa] = useState({titoloTappa, dataTappa})
     /********** CARD MAP ******/
     
 
@@ -75,8 +79,9 @@ function Cards() {
     return (
         <div>
             {/**card contatti */}
-            <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/> {/** card contatti */}
             <Card num={addNumCard()}/> {/** card mappa */}
+            <Card value={contatti} num={addNumCard()} logo={logo} info={informations}/> {/** card contatti */}
+            <Card value={siracusa} num={addNumCard()}/>{/* Card tappa */}
             <Card value={tariffa} num={addNumCard()}/> {/** Card tariffa */}
             <Card value={documents} num={addNumCard()}/> {/**card Documents */}
 

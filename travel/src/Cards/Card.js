@@ -2,6 +2,8 @@ import React, { useState } from "react";
 //import ReactDom from "react-dom";
 import {MapContainer,TileLayer, Marker, Popup} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import './timeline.css'
+import Timeline from "./Timeline";
 /** 
  * Questa component riceve le props dal padre Cards
  * e le stampa a prescindere da ciò viene passato
@@ -32,8 +34,8 @@ function Card(props) {
                     }}>
                         <div className="card-body">
                             <div className="col">
-                                <div className="row">
-                                    <div className="col-6">
+                                <div className="row mt-3">
+                                    <div className="col-3">
                                         {Object.entries(data).map(val=>{
                                         // name: Carlo [name,Carlo]
                                         //image : http-- [image., http]
@@ -58,12 +60,14 @@ function Card(props) {
                                 </div>
                             </div>
                             <div className="col">
-                                <img id="logoAgency"src={logo.image}/>
-                                {info.map((val,index)=>{
-                                    return(
-                                        <p key={index}>{val}</p>
-                                    )
-                                })}
+                                <img id="logoContact"src={logo.image}/>
+                                <div className="p-contact">
+                                    {info.map((val,index)=>{
+                                        return(
+                                            <p key={index}>{val}</p>
+                                        )
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,30 +156,48 @@ function Card(props) {
     function mappa(){
         return(
         <div className="card">
-        <MapContainer style={{width:500, height:500}}center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[51.505, -0.09]}>
-                <Popup>
-                 A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-        </MapContainer>
+            <div className="card-body">
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <MapContainer style={{width:950, height:300}}center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                            <TileLayer
+                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={[51.505, -0.09]}>
+                                <Popup>
+                                A pretty CSS3 popup. <br /> Easily customizable.
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
+                    </div>
+                </div>
+            </div>
         </div>
+        )
+    }
+
+    function tappaCard(){
+        return (
+            <div className="card">
+                <p>{data.titoloTappa}</p>
+                <p>{data.dataTappa}</p>
+                <Timeline />
+            </div>
         )
     }
 
     function renderSwitchCard() {
         switch(numCard) {
           case 1:
-            return contattiCard();
-          case 2:
             return mappa();
-          case 3:
-            return tariffaCard();
+          case 2:
+            return contattiCard();
+          case 3: 
+            return tappaCard();
           case 4:
+            return tariffaCard();
+          case 5:
             return documentiCard();
         }
       }
