@@ -1,0 +1,23 @@
+
+.cardMap{
+    padding: 1rem;
+    border: 1px solid red;
+}
+
+.card-bodyMap{
+    padding: 1rem 0;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumb{
+    background-color: transparent;
+    font-size: .5rem;
+    padding: 0;
+    border: 1px solid red;
+  }
+  
+  .titleMap{
+    border: 1px solid red;
+  }
