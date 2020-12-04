@@ -6,6 +6,7 @@ import DocumentiCard from "./ComponentCards/DocumentiCard";
 import MapCard from './ComponentCards/MapCard'
 import TappaCard from "./ComponentCards/TappaCard";
 import TariffeCard from "./ComponentCards/TariffeCard";
+import CancellationCard from "./ComponentCards/CancellationCard";
 
 
 
@@ -13,6 +14,7 @@ import TariffeCard from "./ComponentCards/TariffeCard";
 function Cards() {
     //importazione dati
     const dati = useContext(ContextApi);
+    console.log("ciao", dati);
     
     var numbCard=0
     
@@ -32,7 +34,14 @@ function Cards() {
     const [contatti,setContatti]=useState({image,name,frase,phone,email});  
     const [logo,setLogo]=useState({image:dati.agency.image})
     /******************** */
+
+
     
+     /****************CARD DOCUMENTI CANCELLAZIONE*************/
+     const cancellation =dati.documentsCancellation.description
+     console.log("hello", cancellation);
+     
+
 
     /****************CARD2 TARIFFE*************/
     //destructuring tariffe
@@ -105,7 +114,7 @@ function Cards() {
             <TappaCard value={siracusa} />
             <TariffeCard value={tariffa} /> {/** Card tariffa */}
             <DocumentiCard value={documents}/> {/**card Documents */}
-
+            <CancellationCard value={cancellation}/> 
         </div>
     )
 }
