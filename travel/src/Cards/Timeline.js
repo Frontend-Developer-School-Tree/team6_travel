@@ -4,7 +4,7 @@ const Timeline = () => {
     return (
         <div className="row text-left">
             <br />
-            <div className="col-md-6 offset-md-3">
+            <div className="col-md-8">
                 
                 <ul className="timeline">
                     <li>
