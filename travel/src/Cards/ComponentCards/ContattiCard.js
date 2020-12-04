@@ -40,7 +40,6 @@ const ContattiCard =props => {
                                             )
                                         })}
                                     </div>
-
                                 </div>
                             </div>
                             <div className="col">

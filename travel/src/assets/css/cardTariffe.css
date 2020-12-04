@@ -1,0 +1,35 @@
+
+.card-bodyTariffe{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-bodyTotale{
+    display: flex;
+    flex-direction: column;
+}
+
+.tipologia p, .prezzi p, #textTotale{
+    font-size: .8rem;
+    color: silver;
+  }
+  
+  .prezzi p, #textTotale, #totale{
+    text-align: end;
+  }
+  
+  #textTotale{
+    font-weight: bold;
+  }
+
+  #totale{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: rgb(250, 204, 0);
+  }
+
+  .comprendeTitle{
+    font-size: 1.2rem !important;
+    color: rgb(250, 204, 0);
+    padding-bottom: .5rem;
+  }

@@ -126,7 +126,7 @@ function Cards() {
     //////////////////
 
     return (
-        <div>
+        <>
             {/**card contatti */}
             <MapCard value={mappa} /> 
             <ContattiCard value={contatti}  logo={logo} info={informations}/> 
@@ -137,7 +137,7 @@ function Cards() {
             <CancellationCard value={cancellation}/> {/**card Cancellation */}
             <PagamentoanticipCard value={pagamentoanticip}/> {/**card Pagamentoanticip */}
             <PropostaCard value={proposta}/> {/**card Proposta */}
-        </div>
+        </>
     )
 }
 

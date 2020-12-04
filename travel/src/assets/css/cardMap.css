@@ -20,7 +20,8 @@
   
   .titleMap{
     color: rgb(250, 204, 0);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
   }
 
   .dettagliMap h5{
