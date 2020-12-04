@@ -1,6 +1,6 @@
-import "../../assets/css/cardMap.css";
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "../../assets/css/cardMap.css";
 import "leaflet/dist/leaflet.css";
 
 
@@ -15,7 +15,7 @@ const MapCard = (props) => {
             <div 
                 className="card cardMap"
                 style={{
-                    width: '100vw',
+                    width: '80vw',
                 }}>
                     <MapContainer
                         style={{
@@ -46,10 +46,12 @@ const MapCard = (props) => {
                             ))}
                         </ol>
                     </nav>
-                    <div><p>{target}</p></div>
-                    <i><h5>Dal {data.dateFrom} al {data.dateTo}{" "}</h5></i>
-                    <i><h5>2 adulti</h5></i>
-                    <i><h5>7 Giorni - 6 Notti</h5></i>
+                    <div className="dettagliMap">
+                        <div><p>{target}</p></div>
+                        <i><h5>Dal {data.dateFrom} al {data.dateTo}{" "}</h5></i>
+                        <i><h5>2 adulti</h5></i>
+                        <i><h5>7 Giorni - 6 Notti</h5></i>
+                    </div>
                 </div>
             </div>
         </div>

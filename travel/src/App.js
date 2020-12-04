@@ -10,10 +10,8 @@ function App() {
     <ProviderApi>
       <div className="App">
         <Header />
-        <div className="container-fluid">
-          <CardLogic />
-          <Footer />
-        </div>
+        <CardLogic />
+        <Footer />
       </div>
     </ProviderApi>
   );

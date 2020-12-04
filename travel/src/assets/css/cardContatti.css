@@ -1,0 +1,48 @@
+
+.card-bodyContatti{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card p {
+    font-size: .6rem;
+    margin: 0;
+  }
+  
+  .card-body #name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .card-body #frase, #phone, #email{
+    font-size: 1rem;
+  }
+  
+  #imageCard {
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+  }
+  
+  #logoContact{
+    width: 5rem;
+  }
+
+  .tipologia p, .prezzi p, #textTotale{
+    font-size: .8rem;
+    color: silver;
+  }
+  
+  .prezzi p, #textTotale{
+    text-align: end;
+  }
+  
+  #textTotale{
+    font-weight: bold;
+  }
+  
+  /* .p-contact{
+    font-size: 20px;
+  }
+   */
+  

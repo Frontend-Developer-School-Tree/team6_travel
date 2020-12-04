@@ -1,0 +1,31 @@
+#header{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .rowHeader{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #logoHeader{
+    width: 5rem;
+    margin: 3rem;
+  }
+  
+  .colTitle{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #titleHeader{
+    font-size: 2rem;
+    color: white;
+  }
+
+  .btn-primary{
+    font-size: .7rem;
+  }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../assets/css/cardContatti.css';
 
 
  /************componente render contattiCard ***************/
@@ -15,7 +16,7 @@ const ContattiCard =props => {
                     <div className="card" style={{
                         width: '100vw',
                     }}>
-                        <div className="card-body">
+                        <div className="card-body card-bodyContatti">
                             <div className="col">
                                 <div className="row mt-3">
                                     <div className="col-3">
