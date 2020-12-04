@@ -6,13 +6,17 @@ import DocumentiCard from "./ComponentCards/DocumentiCard";
 import MapCard from './ComponentCards/MapCard'
 import TappaCard from "./ComponentCards/TappaCard";
 import TariffeCard from "./ComponentCards/TariffeCard";
-
+import CancellationCard from "./ComponentCards/CancellationCard";
+import AssicurationCard from "./ComponentCards/AssicurationCard";
+import PagamentoanticipCard from "./ComponentCards/PagamentoanticipCard";
+import PropostaCard from "./ComponentCards/PropostaCard";
 
 
 /** component Padre di tutte le Card a cui invia i dati alla singola Component per stampare */
 function Cards() {
     //importazione dati
     const dati = useContext(ContextApi);
+    console.log("ciao", dati);
     
     var numbCard=0
     
@@ -32,7 +36,29 @@ function Cards() {
     const [contatti,setContatti]=useState({image,name,frase,phone,email});  
     const [logo,setLogo]=useState({image:dati.agency.image})
     /******************** */
+
+
+
+     /****************CARD ASSICURAZIONE*************/
+     const assicuration =dati.documentsInsurance.description
+    /////////////////////////////////////////////////////////////
+
     
+     /****************CARD CANCELLAZIONE*************/
+     const cancellation =dati.documentsCancellation.description
+    /////////////////////////////////////////////////////////////
+
+
+    /****************CARD PAGAMENTO CON ANTICIPO*************/
+    const pagamentoanticip =dati.documentsPayment.description
+    /////////////////////////////////////////////////////////////
+     
+    /****************CARD PROPOSTA*************/
+    const proposta =dati.documentsCarRental.description
+    /////////////////////////////////////////////////////////////
+
+
+
 
     /****************CARD2 TARIFFE*************/
     //destructuring tariffe
@@ -105,7 +131,10 @@ function Cards() {
             <TappaCard value={siracusa} />
             <TariffeCard value={tariffa} /> {/** Card tariffa */}
             <DocumentiCard value={documents}/> {/**card Documents */}
-
+            <AssicurationCard value={assicuration}/> {/**card Assicuration */}
+            <CancellationCard value={cancellation}/> {/**card Cancellation */}
+            <PagamentoanticipCard value={pagamentoanticip}/> {/**card Pagamentoanticip */}
+            <PropostaCard value={proposta}/> {/**card Proposta */}
         </div>
     )
 }
