@@ -1,12 +1,13 @@
+.containerMap{
+  margin-top: 2rem;
+}
 
 .cardMap{
     padding: 1rem;
-    border: 1px solid red;
 }
 
 .card-bodyMap{
     padding: 1rem 0;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
 }
@@ -15,16 +16,14 @@
     background-color: transparent;
     font-size: .5rem;
     padding: 0;
-    /* border: 1px solid red; */
   }
   
   .titleMap{
-    /* border: 1px solid red; */
     color: rgb(250, 204, 0);
     font-size: 1.5rem;
   }
 
   .dettagliMap h5{
     font-size: 1rem;
-    color: red;
+    color: silver;
   }

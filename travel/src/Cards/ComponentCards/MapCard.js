@@ -10,7 +10,7 @@ const MapCard = (props) => {
   /********** funzione Map **************/
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid containerMap">
         <div className="row">
             <div 
                 className="card cardMap"
