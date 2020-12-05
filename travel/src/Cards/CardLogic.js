@@ -95,9 +95,22 @@ function Cards() {
     //state tappaCarda (siracusa)
     const siracusaTappa=dati.rows[0].places[0].name
     const dataTappa= "20 - 21 NOVEMBRE"
-    const benvenuti= dati.rows[0].days[0].name
+    
+    const titolo1= dati.rows[0].days[0].name
+    const data1 = dati.rows[0].dayDate
     const img1 = dati.rows[0].days[0].images[0].image;
-    const [siracusa, setSiracusa] = useState({siracusaTappa, dataTappa, benvenuti, img1})
+    const descrizioneImg1 = dati.rows[0].days[0].description
+    
+    const data2 = dati.rows[1].dayDate
+    const titolo2 = dati.rows[1].days[0].name
+    const img2 = dati.rows[1].days[0].images[0].image;
+    const descrizioneImg2 = dati.rows[1].days[0].description;
+
+    const [siracusa, setSiracusa] = useState({
+        siracusaTappa, dataTappa, 
+        titolo1, img1, data1, descrizioneImg1, 
+        titolo2, img2, data2, descrizioneImg2})
+    
     
     /********** CARD MAP ******/
     const coordsMarker=[]
