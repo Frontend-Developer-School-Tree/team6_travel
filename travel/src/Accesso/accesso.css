@@ -1,26 +1,29 @@
-body {
-    background-color: teal;
-}
-.containerLogin{
-    display:flex;
-    justify-content:center;
-}
-.formContainer {
+
+
+.formBody{
+    color: #3e3e3e;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: lightblue;
+    width: 40vw;
+    margin: 5rem auto;
+    align-items: center;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-group{
+    width: 70%;
+}
+
+.titleLogin{
+    font-size: 1.5rem;
     text-align: center;
-    box-sizing: border-box;
-    justify-content: space-around;
-    height: 50vh;
-    width: 30vw;
-    margin-top: 12.5vh;
-    border: 5px solid;
-
-    color: black;
-    background-color: white;
+    margin-bottom: 3rem;
 }
 
-.formContainer #formBody {
-    margin-top: 12.5vh;
-    justify-content: center
-    
+.username, .password{
+    font-size: .8rem;
 }
+
