@@ -1,5 +1,5 @@
 import React, {useState, useContext } from "react";
-import './accesso.css'
+import '../assets/css/accesso.css'
 import { Redirect } from 'react-router-dom'
 // import AuthApi from "./AuthApi";
 // import Routing from "./Routing"

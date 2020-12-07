@@ -1,0 +1,17 @@
+.topbar{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.rowTopbar{
+
+}
+
+.welcome{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

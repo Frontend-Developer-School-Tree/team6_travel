@@ -2,8 +2,9 @@ import React, { useState, useContext } from "react";
 import App from "../App";
 import { BrowserRouter as Router,Switch,Route, Redirect } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import AuthApi from './AuthApi'
-import Cookies from 'js-cookie'
+import AuthApi from './AuthApi';
+import Cookies from 'js-cookie';
+import '../assets/css/routing.css';
 
 function Routing() {
   const [auth,setAuth]=useState(false)
@@ -64,9 +65,15 @@ const Home =()=>{
   }
   return(
     <>
-    <div className ="topbar">
+    <div className="container-fluid topbar">
+      <div className="row rowTopbar">
+        <div className="col">
           <h2 className="welcome">Benvenuto</h2>
-          <button onClick={handleOnClick} style={{backgroundColor:'#FFB700',height:40,borderRadius:"10%"}} className="logout btn btn-primary">Logout</button>
+        </div>
+        <div className="col">
+          <button onClick={handleOnClick} className="logout btn btn-primary">Logout</button>
+        </div>
+      </div>
     </div>
     <App />
     </>
