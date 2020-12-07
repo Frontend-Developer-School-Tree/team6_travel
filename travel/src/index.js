@@ -1,18 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Login from "./Accesso/Login";
+import LoginForm from "./Accesso/LoginForm";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import App from './App';
+// import App from './App';
+import Routing from './Accesso/Routing'
 
 ReactDOM.render(
   <>
-    {/* <Router>
+      {/* <Router>
       <Redirect to="/login" />
       <Route exact path="/login">
-        <Login />
-      </Route>
+          <LoginForm />
+         </Route>
     </Router> */}
-    <App />
+    <Routing />
   </>,
   document.getElementById("root")
 );
