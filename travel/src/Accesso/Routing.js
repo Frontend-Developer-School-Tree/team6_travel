@@ -67,7 +67,7 @@ const Home =()=>{
     <>
     <div className="container-fluid topbar">
       <div className="row rowTopbar">
-        <div className="col">
+        <div className="col textWelcome">
           <h2 className="welcome">Benvenuto</h2>
         </div>
         <div className="col">
