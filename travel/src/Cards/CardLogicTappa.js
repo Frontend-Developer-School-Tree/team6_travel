@@ -50,10 +50,16 @@ function CardLogicTappa() {
 
     const titolo1S2= dati.rows[3].days[0].name //taormine
     const data1S2 = dati.rows[3].dayDate //23/11/2020
-    const img1S2=dati.rows[3].accomodations[0].images[0].image
-    console.log("giorno3",img1S2);
+    const img1S2=dati.rows[3].accomodations[0].images[0].image //immagine principale 
+    const descrizioneImg2S=dati.rows[3].days[0].description // descrizione Taormina
+    const img1Pargrafo=dati.rows[3].days[0].images[0].image
+    const img2Pargrafo=dati.rows[3].accomodations[0].images[1].image
+    const img3Pargrafo=dati.rows[3].accomodations[0].images[2].image
+    const img4Pargrafo=dati.rows[3].accomodations[0].images[4].image
+    console.log("giorno3",img2Pargrafo);
     const [siracusa2,setSiracusa2]=useState({
-        siracusa1Tappa,titolo1S2,data1S2,img1S2,dataTappa3
+        siracusa1Tappa,titolo1S2,data1S2,img1S2,dataTappa3,descrizioneImg2S,
+        img1Pargrafo,img2Pargrafo,img3Pargrafo,img4Pargrafo
     })
 
 
