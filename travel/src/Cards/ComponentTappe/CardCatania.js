@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import "../../assets/css/cardTappa.css";
-import Timeline from "../Timeline";
+import '../../assets/css/cardCatania.css'
+import Timeline from '../Timeline'
 
 const CardCatania = (props) => {
 

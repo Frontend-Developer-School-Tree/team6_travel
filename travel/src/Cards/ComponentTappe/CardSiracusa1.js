@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "../../assets/css/cardTappa.css";
-import Timeline from "../Timeline";
+import React, { useState } from 'react'
+import '../../assets/css/cardSiracusa1.css'
+import Timeline from '../Timeline'
 
 const CardSiracusa1 = (props) => {
   const [data, setData] = useState(props.value);
