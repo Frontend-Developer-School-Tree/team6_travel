@@ -3,6 +3,7 @@ import { ContextApi } from "../Api/ContextApi";
 import CardVendicari from "./ComponentTappe/CardVendicari";
 import CardSiracusa1 from "./ComponentTappe/CardSiracusa1"
 import CardSiracusa2 from "./ComponentTappe/CardSiracusa2";
+import CardCatania from "./ComponentTappe/CardCatania";
 
 
 function CardLogicTappa() {
@@ -45,7 +46,7 @@ function CardLogicTappa() {
     })
     ///////////////////////////////////////////
 
-    /**********CARD 3 SIRACUSA **************/
+    
     const dataTappa3= "23 - 25 NOVEMBRE"
 
     const titolo1S2= dati.rows[3].days[0].name //taormine
@@ -61,6 +62,17 @@ function CardLogicTappa() {
         siracusa1Tappa,titolo1S2,data1S2,img1S2,dataTappa3,descrizioneImg2S,
         img1Pargrafo,img2Pargrafo,img3Pargrafo,img4Pargrafo
     })
+    /////////////////////////////////////////
+
+    /**********CARD 4 CATANIA **************/
+    const cataniaTappa = dati.rows[5].places[0].name
+    const dataTappa4 = "26 NOVEMBRE"
+    const titolo1C = dati.rows[4].days[0].name
+    const data1C = dati.rows[4].dayDate
+    const [catania, setCatania] = useState(
+        {cataniaTappa, dataTappa4, titolo1C, data1C}
+    )
+    /////////////////////////////////////////
 
 
 
@@ -69,6 +81,7 @@ function CardLogicTappa() {
             <CardSiracusa1 value={siracusa1}/>
             <CardVendicari value={vendicari}/>
             <CardSiracusa2 value={siracusa2}/>
+            <CardCatania value={catania} />
         </>
     )
 }

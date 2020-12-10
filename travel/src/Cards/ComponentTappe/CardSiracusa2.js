@@ -43,7 +43,7 @@ function CardSiracusa2(props) {
                       <div>
                         <div className="container-fluid p-0">
                           <div className="row">
-                            <div className="col-1 d-none d-xl-block">
+                            <div className="col-1 d-xl-block">
                               <div className="row" style={{ height: "99%" }}>
                                 <div
                                   class="col-12"

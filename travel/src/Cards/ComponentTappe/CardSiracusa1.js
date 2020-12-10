@@ -40,7 +40,7 @@ const CardSiracusa1 = (props) => {
           <div className="card-body">
             <div className="container-fluid p-0">
               <div className="row">
-                <div className="col-1 d-none d-xl-block">
+                <div className="col-1 d-xl-block">
                   timeline
                   {/* <Timeline /> */}
                 </div>
@@ -61,11 +61,29 @@ const CardSiracusa1 = (props) => {
 
                   {/* border cliccabile che dovrebbe uscire una modal */}
                   <div className="row mt-3" style={{ border: "1px solid" }}>
-                    <div className="col-1 m-4">QUADRATO ARANCIO</div>
-                    <div className="col-4 m-4">
-                      <div className="row">AUTO CAT. B</div>
-                      <div className="row">LUOGO DI RITIRO (BOTTONE)</div>
-                      <div className="row">LUOGO DI RILASCIO (BOTTONE)</div>
+                    <div className="col-1 m-4" style={{ border: "1px", backgroundColor: "orange"}}>
+                      car
+                    </div>
+                    <div className="col m-4">
+                      <div className="row">
+                          AUTO CAT. B
+                      </div>
+                      <div className="row">
+                        <div className="col">
+                          LUOGO DI RITIRO
+                          <button type="button" className="btn text-blue radius-50 btn-outline ml-2">
+                            Aereoporto Fontanarossa
+                          </button>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col">
+                          LUOGO DI RILASCIO
+                          <button type="button" className="btn text-blue radius-50 btn-outline ml-2">
+                            Aereoporto Fontanarossa
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   {/*  */}
@@ -126,10 +144,10 @@ const CardSiracusa1 = (props) => {
                         <a href="">Clicca qui per maggiori dettagli</a>
                       </p>
                       <br />
-                      <button type="button" className="btn btn-primary mr-3">
+                      <button type="button" className="btn text-blue radius-50 btn-outline mr-2">
                         Frontespiaggia
                       </button>
-                      <button type="button" className="btn btn-primary">
+                      <button type="button" className="btn text-blue radius-50 btn-outline">
                         Piscina
                       </button>
                     </div>
