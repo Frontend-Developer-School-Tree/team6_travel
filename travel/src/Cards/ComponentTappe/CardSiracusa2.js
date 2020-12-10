@@ -232,7 +232,7 @@ function CardSiracusa2(props) {
                                 </div>
                               </div>
                               {/** immagini sotto il paragrafo Alternativa 1 */}
-                              <div className="row pl-4" onClick={handleShow}>
+                              <div className="row pl-4" onClick={handleSgit stashhow}>
                                 <div className="col-12">
                                   <div className="container-gallery">
                                     <div
@@ -508,7 +508,6 @@ function CardSiracusa2(props) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
