@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "../../assets/css/CardSiracusa2.css";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+
 function CardSiracusa2(props) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [data, setData] = useState(props.value);
   return (
     <div className="container-fluid accordition-print">
@@ -38,95 +46,90 @@ function CardSiracusa2(props) {
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <div>
-                    <div>
-                      <div>
-                        <div className="container-fluid p-0">
-                          <div className="row">
-                            <div className="col-1 d-xl-block">
-                              <div className="row" style={{ height: "99%" }}>
-                                <div
-                                  class="col-12"
-                                  style={{ overflow: "hidden" }}
-                                >
-                                  <div class="row">
-                                    <div class="col-12">
-                                      <div class="day d-flex align-items-center justify-content-center">
-                                        <p class="rob m-0 text-white text-uppercase">
-                                          Day
-                                          <span class="font-weight-bold">
-                                            4
-                                          </span>
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row pt-2">
-                                    <div class="col-12 d-flex align-items-center justify-content-center">
-                                      <div class="pinmap pin ">
-                                        <p
-                                          class="m-0 material-icons icon-center"
-                                          style={{
-                                            color: " rgb(137, 170, 185)",
-                                          }}
-                                        >
-                                          place
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row pt-2 h-100">
+                  <div className="container-fluid p-0">
+                    <div className="row">
+                      <div className="col-1 d-xl-block">
+                        <div className="row" style={{ height: "99%" }}>
+                          <div
+                            className="col-12"
+                            style={{ overflow: "hidden" }}
+                          >
+                            <div className="row">
+                              <div className="col-12">
+                                <div className="day d-flex align-items-center justify-content-center">
+                                  <p className="rob m-0 text-white text-uppercase">
+                                    Day
+                                    <span className="font-weight-bold">4</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row pt-2">
+                              <div className="col-12 d-flex align-items-center justify-content-center">
+                                <div className="pinmap pin ">
+                                  <p
+                                    className="m-0 material-icons icon-center"
+                                    style={{
+                                      color: " rgb(137, 170, 185)",
+                                    }}
+                                  >
+                                    place
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row pt-2 h-100">
+                              <div
+                                className="col-12 bg-dot dot-background"
+                                style={{
+                                  backgroundImage:
+                                    "url(http://51.77.82.133:86/images/Ellipse.png)",
+                                }}
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        timeline
+                        {/* <Timeline /> */}
+                      </div>
+                      {/**destra della timeline e quindi body */}
+                      <div className="col-12 col-xl-11 p-0">
+                        <div className="card no-shadow-border">
+                          <p className="rob">{data.siracusa1Tappa}</p>
+                          <div className="card-header card-header-custom pt-0 d-md-flex align-items-md-center">
+                            <div className="d-block d-xl-none day-mobile d-flex align-items-center justify-content-center mr-3 mr-xl-0">
+                              <p className="rob m-0 text-white text-uppercase">
+                                Day<span class="font-weight-bold">4</span>
+                              </p>
+                            </div>
+                            <p className="rob title-day text-yellow font-weight-bold m-0">
+                              {data.titolo1S2}{" "}
+                            </p>
+                            <p className="rob text-grey body-section mb-0 ml-0 ml-md-3">
+                              {" "}
+                              {data.data1S2}
+                            </p>
+                          </div>
+                          <div
+                            className="background-image h-300"
+                            style={{
+                              backgroundImage: `url(${data.img1S2})`,
+                            }}
+                          ></div>
+                          <div className="card-body pt-0">
+                            <div className="no-print">
+                              <div className="VueCarousel d-block d-lg-none">
+                                <div className="VueCarousel-wrapper">
+                                  <div className="VueCarousel-inner">
                                     <div
-                                      class="col-12 bg-dot dot-background"
-                                      style={{
-                                        backgroundImage:
-                                          "url(http://51.77.82.133:86/images/Ellipse.png)",
-                                      }}
+                                      tabIndex="-1"
+                                      role="tabpanel"
+                                      className="VueCarousel-slide VueCarousel-slide-active VueCarousel-slide-center"
                                     ></div>
                                   </div>
                                 </div>
                               </div>
-                              timeline
-                              {/* <Timeline /> */}
-                            </div>
-                            <div className="col-12 col-xl-11 p-0">
-                              <div className="card no-shadow-border">
-                                <p className="rob">{data.siracusa1Tappa}</p>
-                                <div className="card-header card-header-custom pt-0 d-md-flex align-items-md-center">
-                                  <div className="d-block d-xl-none day-mobile d-flex align-items-center justify-content-center mr-3 mr-xl-0">
-                                    <p className="rob m-0 text-white text-uppercase">
-                                      Day<span class="font-weight-bold">1</span>
-                                    </p>
-                                  </div>
-                                  <p className="rob title-day text-yellow font-weight-bold m-0">
-                                    {data.titolo1S2}{" "}
-                                  </p>
-                                  <p className="rob text-grey body-section mb-0 ml-0 ml-md-3">
-                                    {" "}
-                                    {data.data1S2}
-                                  </p>
-                                </div>
-                                <div className="card-body pt-0">
-                                  <div className="no-print">
-                                    <div className="VueCarousel d-block d-lg-none">
-                                      <div className="VueCarousel-wrapper">
-                                        <div className="VueCarousel-inner">
-                                          <div
-                                            tabIndex="-1"
-                                            role="tabpanel"
-                                            className="VueCarousel-slide VueCarousel-slide-active VueCarousel-slide-center"
-                                          >
-                                            <div
-                                              className="background-image h-300"
-                                              style={{
-                                                backgroundImage: `url(${data.img1S2})`,
-                                              }}
-                                            ></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    {/* <div
+                              {/* <div
                                       data-v-438fd353=""
                                       className="VueCarousel-pagination"
                                       style={{ display: "none" }}
@@ -137,7 +140,7 @@ function CardSiracusa2(props) {
                                         className="VueCarousel-dot-container"
                                         style={{ marginTop: "20px" }}
                                       > */}
-                                        {/* <button
+                              {/* <button
                                           data-v-438fd353=""
                                           aria-hidden="false"
                                           role="tab"
@@ -154,36 +157,36 @@ function CardSiracusa2(props) {
                                             backgroundColor: "rgb(0, 0, 0)",
                                           }}
                                         ></button> */}
-                                      {/* </div>
+                              {/* </div>
                                     </div> */}
-                                  </div>
-                                </div>
-                                {/* <div
+                            </div>
+                          </div>
+                          {/* <div
                                   className="background-image h-300 print"
                                   style={{
                                     backgroundImage: `url("undefined")`,
                                   }}
                                 ></div> */}
-                                <div className="no-print">
-                                  <div className="d-none d-lg-block ">
-                                    <div className="row">
-                                      <div className="col-12">
-                                        <div
-                                          className="background-image h-300 hover-section"
-                                          style={{
-                                            backgroundImage: `url(${data.img1S2})`,
-                                          }}
-                                        ></div>
-                                      </div>
-                                    </div>
-                                  </div>
+                          <div className="no-print">
+                            <div className="d-none d-lg-block ">
+                              <div className="row">
+                                <div className="col-12">
+                                  <div
+                                    className="background-image h-300 hover-section"
+                                    style={{
+                                      backgroundImage: `url(${data.img1S2})`,
+                                    }}
+                                  ></div>
                                 </div>
-                                <div className="pt-3">
-                                  <p className="card-text rob small-text">
-                                    {data.descrizioneImg2S}
-                                  </p>
-                                </div>
-                                {/* <div
+                              </div>
+                            </div>
+                          </div>
+                          <div className="pt-3">
+                            <p className="card-text rob small-text">
+                              {data.descrizioneImg2S}
+                            </p>
+                          </div>
+                          {/* <div
                                   aria-hidden="true"
                                   className="modal custom-modal"
                                 >
@@ -219,186 +222,167 @@ function CardSiracusa2(props) {
                                     </div>
                                   </div>
                                 </div> */}
-                                <div className="row my-3">
-                                  <div className="col-12 col-xl-6">
-                                    <div className="row pl-4">
-                                      <div className="col-12 padding-card">
-                                        <p className="body-section rob font-weight-bold">
-                                          Alternativa 1
-                                        </p>
-                                      </div>
-                                    </div>
-                                    {/** immagini sotto il paragrafo Alternativa 1 */}
-                                    <div className="row pl-4">
-                                      <div className="col-12">
-                                        <div className="container-gallery">
-                                          <div
-                                            className="container-image"
-                                            style={{
-                                              backgroundImage: `url(${data.img1Pargrafo})`,
-                                            }}
-                                          ></div>
-                                          <div
-                                            className="container-image"
-                                            style={{
-                                              backgroundImage: `url(${data.img2Pargrafo})`,
-                                              objectFit: "cover",
-                                            }}
-                                          ></div>
-                                          <div
-                                            className="container-image"
-                                            style={{
-                                              backgroundImage: `url(${data.img3Pargrafo})`,
-                                            }}
-                                          ></div>
-                                          <div
-                                            aria-hidden="true"
-                                            className="modal custom-modal"
-                                          >
-                                            <div
-                                              role="document"
-                                              className="modal-dialog modal-dialog-centered modal-xl"
+                          <div className="row my-3">
+                            <div className="col-12 col-xl-6">
+                              <div className="row pl-4">
+                                <div className="col-12 padding-card">
+                                  <p className="body-section rob font-weight-bold">
+                                    Alternativa 1
+                                  </p>
+                                </div>
+                              </div>
+                              {/** immagini sotto il paragrafo Alternativa 1 */}
+                              <div className="row pl-4" onClick={handleShow}>
+                                <div className="col-12">
+                                  <div className="container-gallery">
+                                    <div
+                                      className="container-image"
+                                      style={{
+                                        backgroundImage: `url(${data.img1Pargrafo})`,
+                                      }}
+                                    ></div>
+                                    <div
+                                      className="container-image"
+                                      style={{
+                                        backgroundImage: `url(${data.img2Pargrafo})`,
+                                        objectFit: "cover",
+                                      }}
+                                    ></div>
+                                    <div
+                                      className="container-image"
+                                      style={{
+                                        backgroundImage: `url(${data.img3Pargrafo})`,
+                                      }}
+                                    ></div>
+                                    <div
+                                      aria-hidden="true"
+                                      className="modal custom-modal"
+                                    >
+                                      <div
+                                        role="document"
+                                        className="modal-dialog modal-dialog-centered modal-xl"
+                                      >
+                                        <div className="modal-content">
+                                          <div className="modal-header bg-white">
+                                            <button
+                                              type="button"
+                                              aria-label=""
+                                              className="close text-black"
                                             >
-                                              <div className="modal-content">
-                                                <div className="modal-header bg-white">
-                                                  <button
-                                                    type="button"
-                                                    aria-label=""
-                                                    className="close text-black"
-                                                  >
-                                                    <span aria-hidden="true">
-                                                      ×
-                                                    </span>
-                                                  </button>
-                                                </div>
-                                                <div className="modal-body bg-white">
-                                                  <div className="row">
-                                                    <div className="col-12">
-                                                      <div
-                                                        className="container-image-top"
-                                                        style={{
-                                                          backgroundImage: `url(${data.img1Pargrafo})`,
-                                                        }}
-                                                      ></div>
-                                                    </div>
-                                                  </div>
-                                                  <div className="row mt-3">
-                                                    <div className="col-12">
-                                                      <div className="container-preview-gallery">
-                                                        <div
-                                                          className="container-image"
-                                                          style={{
-                                                            backgroundImage: `url(${data.img1Pargrafo})`,
-                                                          }}
-                                                        ></div>
-                                                        <div
-                                                          className="container-image"
-                                                          style={{
-                                                            backgroundImage: `url(${data.img2Pargrafo})`,
-                                                          }}
-                                                        ></div>
-                                                        <div
-                                                          className="container-image"
-                                                          style={{
-                                                            backgroundImage: `url(${data.img3Pargrafo})`,
-                                                          }}
-                                                        ></div>
-                                                        <div
-                                                          className="container-image"
-                                                          style={{
-                                                            backgroundImage: `url("null")`,
-                                                          }}
-                                                        ></div>
-                                                        <div
-                                                          className="container-image"
-                                                          style={{
-                                                            backgroundImage: `url(${data.img4Pargrafo})`,
-                                                          }}
-                                                        ></div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
+                                              <span aria-hidden="true">×</span>
+                                            </button>
+                                          </div>
+                                          <div className="modal-body bg-white">
+                                            <div className="row">
+                                              <div className="col-12">
+                                                <div
+                                                  className="container-image-top"
+                                                  style={{
+                                                    backgroundImage: `url(${data.img1Pargrafo})`,
+                                                  }}
+                                                ></div>
+                                              </div>
+                                            </div>
+                                            <div className="row mt-3">
+                                              <div className="col-12">
+                                                <div className="container-preview-gallery">
+                                                  <div
+                                                    className="container-image"
+                                                    style={{
+                                                      backgroundImage: `url(${data.img1Pargrafo})`,
+                                                    }}
+                                                  ></div>
+                                                  <div
+                                                    className="container-image"
+                                                    style={{
+                                                      backgroundImage: `url(${data.img2Pargrafo})`,
+                                                    }}
+                                                  ></div>
+                                                  <div
+                                                    className="container-image"
+                                                    style={{
+                                                      backgroundImage: `url(${data.img3Pargrafo})`,
+                                                    }}
+                                                  ></div>
+                                                  <div
+                                                    className="container-image"
+                                                    style={{
+                                                      backgroundImage: `url("null")`,
+                                                    }}
+                                                  ></div>
+                                                  <div
+                                                    className="container-image"
+                                                    style={{
+                                                      backgroundImage: `url(${data.img4Pargrafo})`,
+                                                    }}
+                                                  ></div>
                                                 </div>
                                               </div>
                                             </div>
                                           </div>
-                                          <div className="container-gallery-vertical">
-                                            <div
-                                              className="image-miniature"
-                                              style={{
-                                                backgroundImage: `url("null")`,
-                                              }}
-                                            ></div>
-                                            <div
-                                              className="image-miniature"
-                                              style={{
-                                                backgroundImage: `url(${data.img4Pargrafo})`,
-                                              }}
-                                            ></div>
-                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div className="col-12 col-xl-6">
-                                    <div style={{ breakInside: "avoid" }}>
-                                      <div className="col-12 hover-section p-4">
-                                        <div>
-                                          <p className="rob title-hotel title-section font-weight-bold">
-                                            Tenuta San Michele
-                                          </p>
-                                          <p className="small-text rob">
-                                            l'agritourisme appartient au cellier
-                                            renommé Tenuta San Michele du Baron
-                                            Emanuele Scammacca del Murgo, où
-                                            sont produits des vins typiques du
-                                            terroir et un vin mousseux.
-                                            Possibilité de participer aux
-                                            activités du cellier, dégustation de
-                                            vins et visite des caves avec guide.
-                                          </p>
-                                          <p className="small-text rob">
-                                            <a>
-                                              Clicca qui per maggiori dettagli
-                                            </a>
-                                          </p>
-                                        </div>
-                                        <div className="d-flex">
-                                          <p className="text-blue radius-50 btn-outline mr-2">
-                                            agritourisme
-                                          </p>
-                                          <p className="text-blue radius-50 btn-outline mr-2">
-                                            panoramique{" "}
-                                          </p>
-                                          <p className="text-blue radius-50 btn-outline mr-2">
-                                            vignoble
-                                          </p>
-                                        </div>
-                                      </div>
+                                    <div className="container-gallery-vertical">
                                       <div
-                                        aria-hidden="true"
-                                        className="modal custom-modal"
-                                      >
-                                        <div
-                                          role="document"
-                                          className="modal-dialog modal-dialog-centered modal-lg"
-                                        >
-                                          <div className="modal-content">
-                                            <div className="modal-header">
-                                              <h5 className="modal-title rob">
-                                                Tenuta San Michele
-                                              </h5>
-                                              <button
-                                                type="button"
-                                                aria-label=""
-                                                className="close"
-                                              >
-                                                <span aria-hidden="true">
-                                                  ×
-                                                </span>
-                                              </button>
-                                            </div>
-                                            <div className="modal-body">
+                                        className="image-miniature"
+                                        style={{
+                                          backgroundImage: `url("null")`,
+                                        }}
+                                      ></div>
+                                      <div
+                                        className="image-miniature"
+                                        style={{
+                                          backgroundImage: `url(${data.img4Pargrafo})`,
+                                        }}
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-12 col-xl-6">
+                              <div style={{ breakInside: "avoid" }}>
+                                <div className="col-12 hover-section p-4" onClick={handleShow}>
+                                  <div>
+                                    <p className="rob title-hotel title-section font-weight-bold">
+                                      Tenuta San Michele
+                                    </p>
+                                    <p className="small-text rob">
+                                      l'agritourisme appartient au cellier
+                                      renommé Tenuta San Michele du Baron
+                                      Emanuele Scammacca del Murgo, où sont
+                                      produits des vins typiques du terroir et
+                                      un vin mousseux. Possibilité de participer
+                                      aux activités du cellier, dégustation de
+                                      vins et visite des caves avec guide.
+                                    </p>
+                                    <p className="small-text rob">
+                                      <a>Clicca qui per maggiori dettagli</a>
+                                    </p>
+                                  </div>
+                                  <div className="d-flex">
+                                    <p className="text-blue radius-50 btn-outline mr-2">
+                                      agritourisme
+                                    </p>
+                                    <p className="text-blue radius-50 btn-outline mr-2">
+                                      panoramique{" "}
+                                    </p>
+                                    <p className="text-blue radius-50 btn-outline mr-2">
+                                      vignoble
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="modal custom-modal ">
+                                  <div className="modal-dialog modal-dialog-centered modal-xl">
+                                    <Modal show={show} onHide={handleClose}>
+                                      <Modal.Header closeButton>
+                                        <Modal.Title>
+                                          Tenuta San Michele
+                                        </Modal.Title>
+                                      </Modal.Header>
+                                      <Modal.Body>
+                                        <>
                                               <div className="row my-3">
                                                 <div className="col-12 rob small-text">
                                                   <p className="rob">
@@ -422,7 +406,7 @@ function CardSiracusa2(props) {
                                                 <div
                                                   className="image"
                                                   style={{
-                                                    backgroundImage: `url(${data.img1Pargrafo})`,
+                                                    backgroundImage: `url(${data.img3Pargrafo})`,
                                                   }}
                                                 ></div>
                                                 <div className="row mt-4 w-100">
@@ -491,12 +475,25 @@ function CardSiracusa2(props) {
                                                   </div>
                                                 </div>
                                               </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
+                                            
+                                        </>
+                                      </Modal.Body>
+                                      <Modal.Footer>
+                                        <Button
+                                          variant="secondary"
+                                          onClick={handleClose}
+                                        >
+                                          Close
+                                        </Button>
+                                      </Modal.Footer>
+                                    </Modal>
                                   </div>
+                                </div>
+                                <div className="modal custom-modal">
+                                  <div
+                                    role="document"
+                                    className="modal-dialog modal-dialog-centered modal-lg"
+                                  ></div>
                                 </div>
                               </div>
                             </div>

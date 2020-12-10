@@ -65,13 +65,18 @@ function CardLogicTappa() {
     /////////////////////////////////////////
 
     /**********CARD 4 CATANIA **************/
-    const cataniaTappa = dati.rows[5].places[0].name
+    /* const cataniaTappa = dati.rows[6].places[0].name */
+    const cataniaTappa = "CATANIA"
     const dataTappa4 = "26 NOVEMBRE"
-    const titolo1C = dati.rows[4].days[0].name
-    const data1C = dati.rows[4].dayDate
-    const [catania, setCatania] = useState(
-        {cataniaTappa, dataTappa4, titolo1C, data1C}
-    )
+    const titolo1C = dati.rows[6].days[0].name;
+    const data1C = dati.rows[6].dayDate;
+    const img1C = dati.rows[6].days[0].images[0].image;
+    const descrizioneImg1C = dati.rows[6].days[0].description;
+    
+    const [catania, setCatania] = useState({
+        cataniaTappa, dataTappa4, 
+        titolo1C, data1C, img1C, descrizioneImg1C
+    })
     /////////////////////////////////////////
 
 
