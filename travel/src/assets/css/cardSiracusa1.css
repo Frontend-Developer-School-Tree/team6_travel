@@ -1,12 +1,38 @@
-#imgDay1{
+/* #imgDay1{
     height:80vh;
     width: auto;
-    /* position: absolute; */
-    /* clip: rect(0px 0px 0px 0px); */
+    position: absolute;
+    clip: rect(0px 0px 0px 0px);
 }
+
 #imgDay2{
     height: 500px;
     width: auto;
-    /* position: absolute; */
-    /* clip: rect(0px 0px 0px 0px); */
+    position: absolute;
+    clip: rect(0px 0px 0px 0px);
+} */
+
+*{
+    text-decoration: none;
+}
+
+#accordionSiracusa1{
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.card-header button{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-header p{
+    font-weight: bold;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: 0 0 0 0.2rem transparent;
 }

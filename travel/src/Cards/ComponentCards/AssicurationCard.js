@@ -1,38 +1,47 @@
-import React from 'react'
-import '../../assets/css/cardAssicuration.css'
+import React from "react";
+import "../../assets/css/cardAssicuration.css";
 
 function AssicurationCard(props) {
-    return (
-        <>
-        <div className=" container-fluid containerAssicuration accordition">
-            <div className="card">
-              <div className="card-header" role="tab" id="headingAssicuration">
-                <a
-                  data-toggle="collapse"
-                  data-parent="#accordionEx"
-                  className="font-weight-bold m-0 title-section text-uppercase link color-title"
-                  href="#collapseAssicuration"
-                  aria-expanded="true"
-                  aria-controls="collapseAssicuration"
+  return (
+    <>
+      <div className=" container-fluid containerAssicuration accordition">
+        <div className="row">
+          <div className="col">
+            {/* --------------ACCORDION CARD ASSICURATION-------------- */}
+            <div class="accordion" id="accordionAssicuration">
+              <div class="card">
+                <div class="card-header" id="headingAssicuration">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseAssicuration"
+                      aria-expanded="true"
+                      aria-controls="collapseAssicuration"
+                    >
+                      <p>Assicuration</p>
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseAssicuration"
+                  class="collapse show"
+                  aria-labelledby="headingAssicuration"
+                  data-parent="#accordionAssicuration"
                 >
-                    <p>Assicuration</p>
-                </a>
-              </div>
-              <div
-                id="collapseAssicuration"
-                className="collapse show"
-                role="tabpanel"
-                aria-labelledby="headingAssicuration"
-                data-parent="#accordionEx"
-              >
-                <div className="card-body card-bodyAssicuration">
+                  <div class="card-body">
                     <p>{props.value}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </>
-    )
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default AssicurationCard
+export default AssicurationCard;

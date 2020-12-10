@@ -14,17 +14,33 @@
 
 .breadcrumb {
   background-color: transparent;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   padding: 0;
+}
+
+.dettagliMap{
+  display: flex;
+  flex-direction: column;
+}
+
+.dettagliMap .fa{
+  padding: .4rem .5rem 0 0;
+  color: rgb(250, 204, 0);
+}
+
+.inlineDettagliMap{
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
 }
 
 .titleMap {
   color: rgb(250, 204, 0);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-.dettagliMap h5 {
-  font-size: 1rem;
+.dettagliMap p {
+  font-size: 1.2rem;
   color: silver;
 }

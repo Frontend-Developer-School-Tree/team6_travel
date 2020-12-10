@@ -2,37 +2,46 @@ import React from 'react'
 import '../../assets/css/cardPagAnt.css'
 
 function PagamentoanticipCard(props) {
-    return (
-        <>
-        <div className=" container-fluid containerPagAnt accordition">
-            <div className="card">
-              <div className="card-header" role="tab" id="headingPagAnt">
-                <a
-                  data-toggle="collapse"
-                  data-parent="#accordionEx"
-                  className="font-weight-bold m-0 title-section text-uppercase link color-title"
-                  href="#collapsePagAnt"
-                  aria-expanded="true"
-                  aria-controls="collapsePagAnt"
+  return (
+    <>
+      <div className=" container-fluid containerPagAnt accordition">
+        <div className="row">
+          <div className="col">
+            {/* --------------ACCORDION CARD PAGAMENTO ANTICIPATO-------------- */}
+            <div class="accordion" id="accordionPagAnt">
+              <div class="card">
+                <div class="card-header" id="headingPagAnt">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapsePagAnt"
+                      aria-expanded="true"
+                      aria-controls="collapsePagAnt"
+                    >
+                      <p>Pagamento con Anticipo</p>
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapsePagAnt"
+                  class="collapse show"
+                  aria-labelledby="headingPagAnt"
+                  data-parent="#accordionPagAnt"
                 >
-                    <p>Pagamento con Anticipo</p>
-                </a>
-              </div>
-              <div
-                id="collapsePagAnt"
-                className="collapse show"
-                role="tabpanel"
-                aria-labelledby="headingPagAnt"
-                data-parent="#accordionEx"
-              >
-                <div className="card-body card-bodyAssicuration">
+                  <div class="card-body">
                     <p>{props.value}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </>
-    )
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default PagamentoanticipCard
+export default PagamentoanticipCard;

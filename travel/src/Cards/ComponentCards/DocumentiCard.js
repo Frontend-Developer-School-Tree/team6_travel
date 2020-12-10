@@ -6,28 +6,37 @@ const DocumentiCard = (props) => {
   return (
     <>
       <div className=" container-fluid containerDocumenti accordition">
-        <div className="card">
-          <div className="card-header" role="tab" id="headingDocumenti">
-            <a
-              data-toggle="collapse"
-              data-parent="#accordionEx"
-              className="font-weight-bold m-0 title-section text-uppercase link color-title"
-              href="#collapseDocumenti"
-              aria-expanded="true"
-              aria-controls="collapseDocumenti"
-            >
-              <p id="TitoloDocumenti">{data.titoloDocumenti}</p>
-            </a>
-          </div>
-          <div
-            id="collapseDocumenti"
-            className="collapse show"
-            role="tabpanel"
-            aria-labelledby="headingDocumenti"
-            data-parent="#accordionEx"
-          >
-            <div className="card-body card-bodyDocumenti">
-              <p id="ParagrafoDocumenti">{data.paragrafoDocumenti}</p>
+        <div className="row">
+          <div className="col">
+            {/* --------------ACCORDION CARD DOCUMENTI-------------- */}
+            <div class="accordion" id="accordionDocumenti">
+              <div class="card">
+                <div class="card-header" id="headingDocumenti">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseDocumenti"
+                      aria-expanded="true"
+                      aria-controls="collapseDocumenti"
+                    >
+                      <p>{data.titoloDocumenti}</p>
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseDocumenti"
+                  class="collapse show"
+                  aria-labelledby="headingDocumenti"
+                  data-parent="#accordionDocumenti"
+                >
+                  <div class="card-body">
+                    <p>{data.paragrafoDocumenti}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

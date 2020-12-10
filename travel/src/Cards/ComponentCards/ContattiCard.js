@@ -19,7 +19,7 @@ const ContattiCard =props => {
                         <div className="card-body card-bodyContatti">
                             <div className="col">
                                 <div className="row mt-3">
-                                    <div className="col-5">
+                                    <div className="col-3">
                                         {Object.entries(data).map(val=>{
                                         // name: Carlo [name,Carlo]
                                         //image : http-- [image., http]
@@ -31,7 +31,7 @@ const ContattiCard =props => {
                                             )
                                         })}
                                     </div>
-                                    <div className="col-7">
+                                    <div className="col-9">
                                         {Object.entries(data).map(val=>{
                                             return(
                                                 (val[1].substring(0,4)!="http") ?

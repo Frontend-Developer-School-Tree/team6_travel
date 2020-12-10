@@ -1,5 +1,17 @@
-.containerDocumenti{
+#accordionDocumenti{
     max-width: 80vw;
-    padding: 0 !important;
-    
+    margin: 0 auto;
+}
+
+.card-header button{
+    padding: 0;
+    margin: 0;
+}
+
+.card-header p{
+    font-weight: bold;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: 0 0 0 0.2rem transparent;
 }
