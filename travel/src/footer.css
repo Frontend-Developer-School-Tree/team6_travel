@@ -1,8 +1,21 @@
 .footer{
-    background-color:grey;
+   background-color: #3482d4;
     color:white;
     text-align: left;
  }
  .footer p{
     margin: 10px;
  }
+
+ .white-button {
+   padding: 5px;
+   background-color: #fff;
+   color: #3482d4;
+   border: 2px solid #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all .4s;
+   font-weight: 700;
+   font-size: .75rem;
+}

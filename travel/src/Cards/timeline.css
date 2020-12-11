@@ -28,3 +28,6 @@ ul.timeline > li:before {
     height: 20px;
     z-index: 400;
 }
+.col-12 .bg-dot .dot-background{
+    background-image: "url(http://51.77.82.133:86/images/Ellipse.png)"
+}
