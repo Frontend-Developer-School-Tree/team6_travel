@@ -327,179 +327,179 @@ const CardSiracusa1 = (props) => {
                             </div>
                           </div>
                         </div>
+                      </div> 
                         {/******************* */}
-                        <div className="row">
-                          <div className="col-1 d-xl-block dots">
-                            <Timeline day={2} />
+                      <div className="row">
+                        <div className="col-1 d-xl-block dots">
+                          <Timeline day={2} />
+                        </div>
+                        <div className="col-11 col-xl-11 p-0">
+                          <div className="contday h2">
+                            {console.log("dati giorno 1", data.dataInizio)}
+                            <h2>
+                              {data.titolo2S1}{" "}
+                              <span
+                                style={{ fontSize: "1.2rem", color: "grey" }}
+                              >
+                                {data.data1S1}
+                              </span>
+                            </h2>
+                            <div className="container-image-cover">
+                              <img
+                                className="container-image-cover"
+                                src={data.img2S1}
+                              />
+                            </div>
+
+                            <p>{data.descrizioneImg2S1}</p>
                           </div>
-                          <div className="col-11 col-xl-11 p-0">
-                            <div className="contday h2">
-                              {console.log("dati giorno 1", data.dataInizio)}
-                              <h2>
-                                {data.titolo2S1}{" "}
-                                <span
-                                  style={{ fontSize: "1.2rem", color: "grey" }}
-                                >
-                                  {data.data1S1}
-                                </span>
-                              </h2>
-                              <div className="container-image-cover">
-                                <img
-                                  className="container-image-cover"
-                                  src={data.img2S1}
-                                />
-                              </div>
 
-                              <p>{data.descrizioneImg2S1}</p>
+                          {/* border cliccabile che dovrebbe uscire una modal */}
+
+                          <div className="row mt-3" onClick={handleShow4}>
+                            <div className="col-6">
+                              <img
+                                src="http://51.77.82.133:86/api/images/172/images/kQIgjJi2wiKRDCUL.jpeg"
+                                className="container-image-cover"
+                              />
                             </div>
-
-                            {/* border cliccabile che dovrebbe uscire una modal */}
-
-                            <div className="row mt-3" onClick={handleShow4}>
-                              <div className="col-6">
-                                <img
-                                  src="http://51.77.82.133:86/api/images/172/images/kQIgjJi2wiKRDCUL.jpeg"
-                                  className="container-image-cover"
-                                />
-                              </div>
-                              <div className="col-md-5 accdialog">
-                                <div role="button">
-                                  <div>
-                                    <strong>La Corte del sole</strong>
-                                  </div>
-                                  <div className="small-text">
-                                    L'hôtel se développe autour du “baglio”, une
-                                    petite cour intérieure de pierres blanches
-                                    où se déroulait autrefois la vie des
-                                    travailleurs de la ferme. Pendant les
-                                    chaudes soirées d'été, c'est l'endroit idéal
-                                    pour les événements à thème, gastronomie et
-                                    spectacles.
-                                  </div>
-                                  <div>
-                                    <a style={{ color: "rgb(0, 99, 201" }}>
-                                      Clicca qui per maggiori dettagli
-                                    </a>
-                                  </div>
-                                  <button className="btn btn-primary tag">
-                                    Frontespiaggia
-                                  </button>
-                                  <button class="btn btn-primary tag">
-                                    Piscina
-                                  </button>
+                            <div className="col-md-5 accdialog">
+                              <div role="button">
+                                <div>
+                                  <strong>La Corte del sole</strong>
                                 </div>
+                                <div className="small-text">
+                                  L'hôtel se développe autour du “baglio”, une
+                                  petite cour intérieure de pierres blanches
+                                  où se déroulait autrefois la vie des
+                                  travailleurs de la ferme. Pendant les
+                                  chaudes soirées d'été, c'est l'endroit idéal
+                                  pour les événements à thème, gastronomie et
+                                  spectacles.
+                                </div>
+                                <div>
+                                  <a style={{ color: "rgb(0, 99, 201" }}>
+                                    Clicca qui per maggiori dettagli
+                                  </a>
+                                </div>
+                                <button className="btn btn-primary tag">
+                                  Frontespiaggia
+                                </button>
+                                <button class="btn btn-primary tag">
+                                  Piscina
+                                </button>
                               </div>
                             </div>
-                            <>
-                              <Modal show={show4} onHide={handleClose4}>
-                                <Modal.Header closeButton>
-                                  <Modal.Title>La Corte del sole</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                  <>
-                                    <div>
-                                      <strong>Hotel</strong>
-                                    </div>
-                                    <div className="row">
-                                      <div className="col-md-12">
+                          </div>
+                          <>
+                            <Modal show={show4} onHide={handleClose4}>
+                              <Modal.Header closeButton>
+                                <Modal.Title>La Corte del sole</Modal.Title>
+                              </Modal.Header>
+                              <Modal.Body>
+                                <>
+                                  <div>
+                                    <strong>Hotel</strong>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <br />
+                                      <div className="row p-2">
+                                        <img
+                                          src="http://51.77.82.133:86/api/images/172/images/kQIgjJi2wiKRDCUL.jpeg"
+                                          className="container-image-cover"
+                                        />
+                                      </div>
+                                      <br />
+                                      <p style={{ marginTop: 10 }}>
+                                        <strong>Descrizione</strong>
+                                      </p>
+                                      <div>
+                                        L'hôtel se développe autour du
+                                        “baglio”, une petite cour intérieure
+                                        de pierres blanches où se déroulait
+                                        autrefois la vie des travailleurs de
+                                        la ferme. <br />
+                                        Pendant les chaudes soirées d'été,
+                                        c'est l'endroit idéal pour les
+                                        événements à thème, gastronomie et
+                                        spectacles.
                                         <br />
-                                        <div className="row p-2">
-                                          <img
-                                            src="http://51.77.82.133:86/api/images/172/images/kQIgjJi2wiKRDCUL.jpeg"
-                                            className="container-image-cover"
-                                          />
-                                        </div>
+                                      </div>
+                                      <p style={{ marginTop: 10 }}>
+                                        <strong>Ristorante</strong>
+                                      </p>
+                                      <div>
+                                        Le restaurant offre des recettes
+                                        simples de plats délicats appartenant
+                                        à la tradition sicilienne, <br />
+                                        souvent enrichies d'ingrédients
+                                        typiques du territoire, en fonction
+                                        des saisons. bar le soir.
+                                      </div>
+                                      <p style={{ marginTop: 10 }}>
+                                        <strong>Camere</strong>
+                                      </p>
+                                      <div>
+                                        L'hôtel dispose de 34 chambres: chaque
+                                        chambre est équipée d'un frigo-bar,<br />
+                                        d'un coffre-fort, de climatisation
+                                        été/hiver, de télévision satellitaire,
+                                        du téléphone, d’un sèche-cheveux,<br />
+                                        d'une salle de bain avec douche, sauf
+                                        deux chambres avec baignoire pour les
+                                        personnes porteuses de handicap et
+                                        deux avec douche hydromassage.
+                                      </div>
+                                      <p style={{ marginTop: 10 }}>
+                                        <strong>Servizi</strong>
+                                      </p>
+                                      <div>
+                                        Sports et divertissements: piscine.
+                                        Court de tennis, salle de fitness.{" "}
                                         <br />
-                                        <p style={{ marginTop: 10 }}>
-                                          <strong>Descrizione</strong>
-                                        </p>
-                                        <div>
-                                          L'hôtel se développe autour du
-                                          “baglio”, une petite cour intérieure
-                                          de pierres blanches où se déroulait
-                                          autrefois la vie des travailleurs de
-                                          la ferme. <br />
-                                          Pendant les chaudes soirées d'été,
-                                          c'est l'endroit idéal pour les
-                                          événements à thème, gastronomie et
-                                          spectacles.
-                                          <br />
-                                        </div>
-                                        <p style={{ marginTop: 10 }}>
-                                          <strong>Ristorante</strong>
-                                        </p>
-                                        <div>
-                                          Le restaurant offre des recettes
-                                          simples de plats délicats appartenant
-                                          à la tradition sicilienne, <br />
-                                          souvent enrichies d'ingrédients
-                                          typiques du territoire, en fonction
-                                          des saisons. bar le soir.
-                                        </div>
-                                        <p style={{ marginTop: 10 }}>
-                                          <strong>Camere</strong>
-                                        </p>
-                                        <div>
-                                          L'hôtel dispose de 34 chambres: chaque
-                                          chambre est équipée d'un frigo-bar,<br />
-                                          d'un coffre-fort, de climatisation
-                                          été/hiver, de télévision satellitaire,
-                                          du téléphone, d’un sèche-cheveux,<br />
-                                          d'une salle de bain avec douche, sauf
-                                          deux chambres avec baignoire pour les
-                                          personnes porteuses de handicap et
-                                          deux avec douche hydromassage.
-                                        </div>
-                                        <p style={{ marginTop: 10 }}>
-                                          <strong>Servizi</strong>
-                                        </p>
-                                        <div>
-                                          Sports et divertissements: piscine.
-                                          Court de tennis, salle de fitness.{" "}
-                                          <br />
-                                          Animation piano-bar tous les soirs.
-                                          Remarque: surplombant la mer, <br />
-                                          l'hôtel s'apparente à un petit château
-                                          entouré de jardins en terrasses,
-                                          <br />
-                                          un aménagement de style art nouveau.
-                                          Service de navette (d'avril à octobre,
-                                          payant) pour le centre-ville de
-                                          Palerme.
-                                        </div>
+                                        Animation piano-bar tous les soirs.
+                                        Remarque: surplombant la mer, <br />
+                                        l'hôtel s'apparente à un petit château
+                                        entouré de jardins en terrasses,
+                                        <br />
+                                        un aménagement de style art nouveau.
+                                        Service de navette (d'avril à octobre,
+                                        payant) pour le centre-ville de
+                                        Palerme.
                                       </div>
                                     </div>
-                                  </>
-                                </Modal.Body>
-                                <Modal.Footer>
-                                  <Button
-                                    variant="secondary"
-                                    onClick={handleClose4}
-                                  >
-                                    Chiudi
-                                  </Button>
-                                </Modal.Footer>
-                              </Modal>
-                            </>
-                            <div className="row mt-3 mb-4">
-                              <div className="col-1"></div>
-                              <div className="col-4">
-                                <i
-                                  class="far fa-check-circle"
-                                  aria-hidden="true"
-                                  style={{
-                                    backgroundColor: "rgb(176, 238, 211)",
-                                    color: "rgb(58, 190, 138)",
-                                    fontSize: "40px",
-                                    borderRadius: "100%;",
-                                  }}
-                                ></i>
-                                <p>
-                                  <b>petit déjeuner</b>
-                                  <br />
-                                  prise en charge de la voiture de location
-                                </p>
-                              </div>
+                                  </div>
+                                </>
+                              </Modal.Body>
+                              <Modal.Footer>
+                                <Button
+                                  variant="secondary"
+                                  onClick={handleClose4}
+                                >
+                                  Chiudi
+                                </Button>
+                              </Modal.Footer>
+                            </Modal>
+                          </>
+                          <div className="row mt-3 mb-4">
+                            <div className="col-1"></div>
+                            <div className="col-4">
+                              <i
+                                class="far fa-check-circle"
+                                aria-hidden="true"
+                                style={{
+                                  backgroundColor: "rgb(176, 238, 211)",
+                                  color: "rgb(58, 190, 138)",
+                                  fontSize: "40px",
+                                  borderRadius: "100%;",
+                                }}
+                              ></i>
+                              <p>
+                                <b>petit déjeuner</b>
+                                <br />
+                                prise en charge de la voiture de location
+                              </p>
                             </div>
                           </div>
                         </div>
